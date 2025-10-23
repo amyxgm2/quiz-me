@@ -3,23 +3,34 @@ import '../styles/Header.css';
 
 export default function Header() {
     return (
-        <nav>
-            <div className="nav-wrapper">
-                <a href="#" className="brand-logo right">
-                    Logo
-                </a>
-                <ul id="nav-mobile" className="left hide-on-med-and-down">
-                    <li>
-                        <a href="sass.html">Sass</a>
-                    </li>
-                    <li>
-                        <a href="badges.html">Components</a>
-                    </li>
-                    <li>
-                        <a href="collapsible.html">JavaScript</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <header className="header" id="header">
+            <nav className="nav">
+                <Link to="/" className="nav_logo">
+                    QUIZ-ME
+                </Link>
+
+                <div className="nav_menu" id="nav-menu">
+                    <ul className="nav_list">
+                        <li className="nav_item">
+                            <Link to="/" className="nav_link">
+                                Home
+                            </Link>
+                        </li>
+
+                        {/* <li className="nav_item dropdown">
+                            <Link to="/account" className="nav_link">
+                                Account
+                            </Link>
+                        </li> */}
+
+                        <li className="nav_item">
+                            <Link to="/quiz" className="nav_link">
+                                Quiz Generation
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
     )
 }
