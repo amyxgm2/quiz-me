@@ -1,0 +1,136 @@
+:root {
+  --primary-color: #26a69a; /* Materialize teal */
+  --secondary-color: #00796b;
+  --text-color: #333;
+  --bg-color: #fff;
+  --light-gray: #f4f4f4;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+}
+
+main {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* === Header Section === */
+.header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.header img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.header button {
+  background-color: white;
+  color: var(--primary-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.header button:hover {
+  background-color: var(--light-gray);
+  transform: translateY(-2px);
+}
+
+/* === Informational Boxes === */
+.informational-boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  background-color: var(--light-gray);
+}
+
+.informational-boxes div {
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.informational-boxes div:hover {
+  transform: translateY(-4px);
+}
+
+.informational-boxes img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  background-color: var(--light-gray);
+  border-radius: 50%;
+}
+
+.informational-boxes h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.informational-boxes p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* === Media Queries === */
+
+/* Tablets (≥600px) */
+@media (min-width: 600px) {
+  .header {
+    padding: 4rem 2rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .informational-boxes {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+}
+
+/* Desktops (≥992px) */
+@media (min-width: 992px) {
+  .header img {
+    width: 100px;
+  }
+
+  .header h1 {
+    font-size: 2.4rem;
+  }
+
+  .informational-boxes {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .informational-boxes div {
+    padding: 2rem;
+  }
+}
